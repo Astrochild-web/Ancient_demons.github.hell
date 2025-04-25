@@ -130,3 +130,25 @@ a {
 .chat-form button:hover {
   background: #00cccc;
 }
+.profile-card {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #111;
+  color: #00ffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ffff40;
+  z-index: 999;
+}
+.profile-card h2 {
+  margin: 0 0 10px 0;
+}
+.profile-card button {
+  background: #00ffff;
+  border: none;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
