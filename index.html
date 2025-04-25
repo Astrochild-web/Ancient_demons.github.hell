@@ -20,3 +20,10 @@
   </div>
 </body>
 </html>
+<!-- inside login form's submit logic -->
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    window.location.href = "home.html"; // simulate login success
+  });
+</script>
