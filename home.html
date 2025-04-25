@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ancient Demons Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="chat-body">
+  <div class="chat-container">
+    <header class="chat-header">
+      <h1>Welcome to the Circle</h1>
+      <p>Chat with other Ancient Demons</p>
+    </header>
+    <div class="chat-box" id="chat-box">
+      <!-- Messages will appear here -->
+    </div>
+    <form class="chat-form" onsubmit="sendMessage(event)">
+      <input type="text" id="chat-input" placeholder="Type your message..." required />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    function sendMessage(e) {
+      e.preventDefault();
+      const input = document.getElementById("chat-input");
+      const box = document.getElementById("chat-box");
+      const msg = input.value.trim();
+      if (msg !== "") {
+        const msgDiv = document.createElement("div");
+        msgDiv.classList.add("chat-msg");
+        msgDiv.textContent = "You: " + msg;
+        box.appendChild(msgDiv);
+        input.value = "";
+        box.scrollTop = box.scrollHeight;
+      }
+    }
+  </script>
+</body>
+</html>
